@@ -6,9 +6,9 @@
 <script src="js/location.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body onLoad="showPosition()">
     <h1>Onde estou?</h1>
-    <input type="button" value="Find me" onclick="showPosition();" />
+    <input id="btn-here" type="button" value="Find me"/>
     
     <div id="geoarea">
         <p>Aqui!</p>
