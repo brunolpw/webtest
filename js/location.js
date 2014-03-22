@@ -1,4 +1,6 @@
 ﻿// JavaScript Document
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
 var x = document.getElementById("pagina");
 var btnHere = document.getElementById("btn-here");
 
