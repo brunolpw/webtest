@@ -9,10 +9,10 @@ function showPosition() {
 	alert("procurando...");
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(getPosition);
-		area.innerHTML = "Latitude: " + lat + "<br /> Longitude: " + lon;
+		area.innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon;
+		alert("Latitude: " + lat + "<br> Longitude: " + lon);
 	}
 	else{ area.innerHTML = "Infelizmente este browser não suporta o recurso de geolocalização."; }
-	show();
 }
 
 function getPosition(posicao) {
@@ -20,7 +20,7 @@ function getPosition(posicao) {
 }
 
 function show(){
-	area.innerHTML = "Latitude: " + lat + "<br /> Longitude: " + lon;
+	area.innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon;
 }
 
 function geoError( err ) {
