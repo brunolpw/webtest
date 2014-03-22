@@ -1,17 +1,26 @@
 ﻿// JavaScript Document
 var area = document.getElementById("geoarea");
 var btnHere = document.getElementById( "btn-here" );
+var lat, lon;
 
 btnHere.addEventListener("click",showPosition());
  
 function showPosition() {
 	alert("procurando...");
-	if(navigator.geolocation){ navigator.geolocation.getCurrentPosition(getPosition); }
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(getPosition);
+		area.innerHTML = "Latitude: " + lat + "<br /> Longitude: " + lon;
+	}
 	else{ area.innerHTML = "Infelizmente este browser não suporta o recurso de geolocalização."; }
+	show();
 }
 
 function getPosition(posicao) {
-	area.innerHTML = "Latitude: " + posicao.coords.latitude + "<br /> Longitude: " + posicao.coords.longitude;
+	lat = posicao.coords.latitude, lon = posicao.coords.longitude;
+}
+
+function show(){
+	area.innerHTML = "Latitude: " + lat + "<br /> Longitude: " + lon;
 }
 
 function geoError( err ) {
