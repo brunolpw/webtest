@@ -7,12 +7,12 @@ btnHere.addEventListener("click",showPosition());
  
 function showPosition() {
 	alert("procurando...");
-	if(navigator.geolocation){
+	//if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(getPosition);
 		area.innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon;
 		alert("Latitude: " + lat + "<br> Longitude: " + lon);
-	}
-	else{ area.innerHTML = "Infelizmente este browser não suporta o recurso de geolocalização."; }
+	//}
+	//else{ area.innerHTML = "Infelizmente este browser não suporta o recurso de geolocalização."; }
 }
 
 function getPosition(posicao) {
