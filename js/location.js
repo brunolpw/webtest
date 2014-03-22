@@ -2,7 +2,7 @@
 var x = document.getElementById("pagina");
 var btnHere = document.getElementById("btn-here");
 
-btnHere.addEventListener("click",showPosition());
+btnHere.addEventListener("click",getLocation());
 
 function getLocation(){
 	
